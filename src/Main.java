@@ -1,15 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        int id = 0;
+        int idTables = 0;
+        int idMenus = 0;
         int tablica = 10;
         ManagementTable managementTable = new ManagementTable(tablica);
-        managementTable.addTable(id, 3);
-        id++;
-        managementTable.addTable(id, 2);
-        id++;
-        managementTable.addTable(id, 5);
+        managementTable.addTable(idTables, 3);
+        idTables++;
+        managementTable.addTable(idTables, 2);
+        idTables++;
+        managementTable.addTable(idTables, 5);
         managementTable.printTables();
-
+        ManagementMenu managementMenu = new ManagementMenu();
+        managementMenu.addMenu(idMenus,"pizza",10);
+        idMenus++;
+        managementMenu.addMenu(idMenus,"kotlet",20);
+        idMenus++;
+        managementMenu.getMenu();
+        managementMenu.deleteMenu(1);
+        managementMenu.getMenu();
     }
 
 }
